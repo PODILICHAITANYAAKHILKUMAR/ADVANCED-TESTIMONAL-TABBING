@@ -1,0 +1,52 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+.container {
+    width: 95%;
+    max-width: 1025px;
+    margin: auto;
+}
+.grid-a-250 {
+    display: grid;
+    grid-template-columns: auto 250px;
+    align-items: center;
+}
+.tab-nav > li img {
+    display: block;
+    width: 100%;
+    height:100px;
+    filter: grayscale(1);
+}
+ul.tab-nav {
+  list-style: none;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+.tab-nav > li {
+    cursor: pointer;
+    position: relative;
+}
+.testimonial-tabbing-outer {
+    margin: 50px 0;
+}
+.tabs-content h2 {
+    font-size: 35px;
+}
+.user-info {
+    margin-top: 50px;
+}
+.tab-nav > li.active img {
+    filter: unset;
+}
+.tabs-content h2 {
+    font-size: 35px;
+    line-height: 55px;
+}
+.tabs-content > div {
+    display: none;
+}
+.tabs-content > div.current {
+    display: block;
+}

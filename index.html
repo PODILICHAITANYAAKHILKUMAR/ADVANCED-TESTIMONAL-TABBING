@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Advance Testimonial Tabbing</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta https-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+<body>
+  <div class="testimonial-tabbing-outer">
+    <div class="container">
+      <div class="row grid-a-250">
+        <div class="colmun left-col">
+          <div class="tabs-content">
+            <div id="tab1" class="current">
+              <h2>Mahendra Singh Dhoni is an Indian professional cricketer who was captain of the Indian national cricket team in limited-overs formats from 2007-2017.</h2>
+              <div class="user-info">
+                <h4>MS DHONI</h4>
+              </div>
+            </div>
+            <div id="tab2">
+              <h2>Sachin Ramesh Tendulkar is an Indian former international cricketer who captained the Indian national team. He is one of the greatest batsmen.</h2>
+              <div class="user-info">
+                <h4>SACHIN TENDULKAR</h4>
+              </div>
+            </div>
+            <div id="tab3">
+              <h2>Virat Kohli is an Indian international cricketer and former captain of the India national cricket team. He plays for RCB in the Indian Premier League.</h2>
+              <div class="user-info">
+                <h4>VIRAT KOHLI</h4>
+              </div>
+            </div>
+            <div id="tab4">
+              <h2>Rohit Gurunath Sharma is an Indian international cricketer who is the current captain of the Indian national team. A right-handed batsman.</h2>
+              <div class="user-info">
+                <h4>ROHIT SHARMA</h4>
+              </div>
+            </div>
+            <div id="tab5">
+              <h2>Kananur Lokesh Rahul is an Indian international cricketer. He is the current vice-captain of the India national cricket team in all formats.</h2>
+              <div class="user-info">
+                <h4>Kl RAHUL</h4>
+              </div>
+            </div>
+            <div id="tab6">
+              <h2>Ravindrasinh Anirudhsinh Jadeja, commonly known as Ravindra Jadeja, is an Indian international cricketer. He is a left arm, off spin bowling all-rounder.</h2>
+              <div class="user-info">
+                <h4>RAVINDRA JADEJA</h4>
+              </div>
+            </div>
+            <div id="tab7">
+              <h2>Deepak Lokendrasingh Chahar is an Indian International cricketer, who represents India in T20 cricket and Rajasthan in domestic cricket. He also represent India in 7 ODIs. Chahar is a medium fast right-arm bowler. </h2>
+              <div class="user-info">
+                <h4>DEEPAK CHAHAR</h4>
+              </div>
+            </div>
+            <div id="tab8">
+              <h2>Hardik Himanshu Pandya is an Indian international cricketer who plays for Baroda in domestic cricket and captains Gujarat Titans in the Indian Premier League. He is an all-rounder who bats right-handed and bowls right-arm fast-medium. </h2>
+              <div class="user-info">
+                <h4>HARDIK PANDYA</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="colmun right-col">
+          <div class="tab-nav-outer">
+            <ul class="tab-nav">
+              <li data-id="tab1" class="active"><img src="images/dhoni.jpg"></li>
+              <li data-id="tab2"><img src="images/sachin.jpg"></li>
+              <li data-id="tab3"><img src="images/kohli.jpg"></li>
+              <li data-id="tab4"><img src="images/rohit.jpg"></li>
+              <li data-id="tab5"><img src="images/rahul.jpg"></li>
+              <li data-id="tab6"><img src="images/jadeja.jpg"></li>
+              <li data-id="tab7"><img src="images/chahar.jpg"></li>
+              <li data-id="tab8"><img src="images/hardik.jpg"></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $(".tab-nav li").click(function(){
+          var tab_id = $(this).attr("data-id");
+          $(".tab-nav li").removeClass("active");
+          $(".tabs-content > div").removeClass("current");
+          $(this).addClass("active");
+          $("#"+tab_id).addClass("current");
+        });
+      });
+    </script>
+
+</body>
+</html>
